@@ -1,1 +1,35 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>U-Cloud</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body { font-family: sans-serif; margin: 0; }
+    #toolbar { padding: 10px; background: #f3f3f3; display: flex; justify-content: space-between; align-items: center; }
+    #file-table { width: 100%; border-collapse: collapse; }
+    #file-table th, #file-table td { border: 1px solid #ddd; padding: 8px; }
+    #file-table th { background: #fafafa; }
+    #status { font-size: 0.95em; }
+    #refresh { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="toolbar">
+    <span><b>U-Cloud</b> <span id="status">Up-to-date</span></span>
+    <button id="refresh">Refresh</button>
+  </div>
+  <table id="file-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Size</th>
+        <th>Modified</th>
+        <th>SHA-256 (10)</th>
+      </tr>
+    </thead>
+    <tbody id="file-rows"></tbody>
+  </table>
+  <script src="main.js"></script>
+</body>
+</html>
